@@ -1,0 +1,67 @@
+<div class = "row" style="background: linear-gradient( to right,pink , lightgreen)">
+  <div class = "col-5" style="text-align: center; margin: 10px 30px 10px 50px;width: 400px;box-shadow: 0px 0px 10px #000;">
+      <h2>肉类</h2>
+      <ul>
+        <li>
+          鸡肉 : {{foodlist.chicken}} <button class=" btn btn-outline-danger" (click)="addfood('chicken')">Add one</button>&nbsp;
+          <button class="btn btn-outline-danger" (click)="resetfood('chicken')">Reset</button>
+        </li>
+        <br/>
+        <li>
+          牛肉 : {{foodlist.beef}} <button class="btn btn-outline-danger" (click)="addfood('beef')">Add one</button>&nbsp;
+          <button class="btn btn-outline-danger" (click)="resetfood('beef')">Reset</button>
+        </li>
+        <br/>
+        <li>
+          鸭肉 : {{foodlist.duck}} <button class="btn btn-outline-danger" (click)="addfood('duck')">Add one</button>&nbsp;
+          <button class="btn btn-outline-danger" (click)="resetfood('duck')">Reset</button>
+        </li>
+        <br/>
+        <li>
+          鱼肉 : {{foodlist.fish}} <button class="btn btn-outline-danger" (click)="addfood('fish')">Add one</button>&nbsp;
+          <button class="btn btn-outline-danger" (click)="resetfood('fish')">Reset</button>
+        </li>
+      </ul>
+      <hr/>
+  </div>
+
+  <div class="col-5" style="text-align: center; margin: 10px 50px 10px 30px; width: 400px; box-shadow: 0px 0px 10px #000; ">
+    <h2>蔬菜</h2>
+    <ul>
+      <li>
+        西红柿 : {{foodlist.tomato}} <button class="btn btn-outline-success" (click)="addfood('tomato')">Add one</button>&nbsp;
+        <button class="btn btn-outline-success" (click)="resetfood('tomato')">Reset</button>
+      </li>
+      <br/>
+      <li>
+        土豆块 : {{foodlist.potato}} <button class="btn btn-outline-success" (click)="addfood('potato')">Add one</button>&nbsp;
+        <button class="btn btn-outline-success" (click)="resetfood('potato')">Reset</button>
+      </li>
+      <br/>
+      <li>
+        生菜叶 : {{foodlist.lettuce}} <button class="btn btn-outline-success" (click)="addfood('lettuce')">Add one</button>&nbsp;
+        <button class="btn btn-outline-success" (click)="resetfood('lettuce')">Reset</button>
+      </li>
+      <br/>
+      <li>
+        西兰花 : {{foodlist.broccoli}} <button class="btn btn-outline-success" (click)="addfood('broccoli')">Add one</button>&nbsp;
+        <button class="btn btn-outline-success" (click)="resetfood('broccoli')">Reset</button>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="input-group input-group-lg">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-lg">其他材料</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="othermetl">
+</div>
+
+<div>
+  <div *ngIf="dishexists" class = "dish"><font size="5">菜名: {{ dishname }}</font> </div>
+  <div style="text-align: center;"><button class="btn btn-light" (click)="makedish()">做菜！</button></div>
+</div>
+
+
