@@ -22,7 +22,7 @@ export class Server2Component implements OnInit {
   }
   makedish() {
     this.dishexists = false;
-    if (this.othermetl != undefined & this.othermetl != "") {
+    if (this.othermetl !== undefined && this.othermetl !== "") {
       this.dishexists = true;
       this.dishname = this.othermetl;
       for (let food in this.foodlist) {
